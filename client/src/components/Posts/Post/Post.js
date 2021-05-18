@@ -19,7 +19,7 @@ const Post = ({ post, setCurrentId }) => {
           <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
           <div className={classes.overlay}>
           <Typography variant="h6">{post.username}</Typography>
-          <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+          <Typography variant="body2">{moment().startOf(post.createdAt).fromNow(true)}</Typography>
 
           </div>
 
@@ -33,7 +33,7 @@ const Post = ({ post, setCurrentId }) => {
           <Typography className={classes.title} variant="h5" gutterBottom>{post.title}</Typography>
 
           <CardContent>
-          <Typography variant="h5" gutterBottom>{post.message}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p" gutterBottom>{post.message}</Typography>
           </CardContent>
 
           <CardActions className={classes.cardActions}>
