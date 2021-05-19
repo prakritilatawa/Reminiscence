@@ -2,14 +2,15 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js';
 
 const app = express();
+dotenv.config();
+// const CONNECTION_URL = 'mongodb+srv://Prakriti:9914453222@cluster0.opx9b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-const CONNECTION_URL = 'mongodb+srv://Prakriti:9914453222@cluster0.opx9b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
     .then( () => console.log('MongoDB connected'))
     .catch((error) => console.log(error.message));
 
