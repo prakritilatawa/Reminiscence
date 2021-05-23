@@ -8,12 +8,14 @@ import a from '../../images/a.png';
 
 const Navbar = () => {
     const classes = useStyles();
+    const user = null;
+
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
         <div className={classes.brandContainer}>
             <Typography component={Link} to="/" className={classes.heading} variant="h4" align="center">Reminiscence</Typography>
-            <img className={classes.image} src={a} alt="reminiscence" height="60"></img>
+            <img className={classes.image} src={a} alt="reminiscence" height="60" />
             
         </div>
         <Toolbar className={classes.toolbar}>
