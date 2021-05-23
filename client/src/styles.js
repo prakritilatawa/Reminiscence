@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
           },
     heading: {
         color: '#a52a2a',
+        
     },
     image: {
         marginLeft: '15px',
