@@ -74,8 +74,8 @@ const googleFailure = (error) => {
                   {
                       isSignup && (
                           <> 
-                               <Input name="firstname" label="First Name" handleChange={handleChange} autoFocus half />
-                               <Input name="lastname" label="Last Name" handleChange={handleChange} autoFocus half />
+                               <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
+                               <Input name="lastName" label="Last Name" handleChange={handleChange} autoFocus half />
                          </>
                       )}
                       <Input name="email" label="Email Address" handleChange={handleChange}  type="email"/>

@@ -39,7 +39,6 @@ const Form = ({ currentId, setCurrentId }) => {
         } else{
             dispatch(updatePost(currentId, {...postData, name: user?.result?.name}));
             clear();
-
         }            
     };
 
@@ -67,7 +66,7 @@ const Form = ({ currentId, setCurrentId }) => {
                  onDone={({base64}) => setPostData({ ...postData, selectedFile: base64 })} />
                    
              </div>
-        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
+        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth onClick={ (e) => handleSubmit(e) }>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
             </form>
 

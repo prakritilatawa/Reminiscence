@@ -4,7 +4,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
- import useStyles from './styles';
+import useStyles from './styles';
+// import * as actionType from '../../constants/actionTypes';
 import a from '../../images/a.png';
 
 const Navbar = () => {
@@ -15,13 +16,10 @@ const Navbar = () => {
     const location = useLocation();
 
     const logout = () => {
-        dispatch({type: 'LOGOUT'});
-
+        dispatch({ type: 'LOGOUT' });
         history.push('/');
         setUser(null);
-
     };
-
 
     useEffect(() => {
         const token = user?.token;
